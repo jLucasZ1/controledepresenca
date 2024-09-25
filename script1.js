@@ -6,7 +6,7 @@ document.getElementById('btnChamada').addEventListener('click', function() {
 document.getElementById('calendario').addEventListener('change', function() {
     const selectedDate = this.value;
     localStorage.setItem('selectedDate', selectedDate);  // Salva a data no LocalStorage
-    window.location.href = 'pagina2.html';  // Redireciona para a página 2
+    window.location.href = 'chamada.html';  // Redireciona para a página 2
 });
 
 // Conclusão

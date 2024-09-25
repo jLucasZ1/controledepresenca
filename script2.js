@@ -141,11 +141,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Botão para voltar à página anterior
     elements.btnVoltar.addEventListener('click', () => {
-        window.location.href = 'pagina1.html';
+        window.location.href = 'inicio.html';
     });
 
     // Botão de confirmação (superior direito) para ir para a página 3
     elements.btnConfirmar.addEventListener('click', () => {
-        window.location.href = 'pagina3.html';  // Verifique se o nome do arquivo HTML está correto
+        window.location.href = 'lista.html';  // Verifique se o nome do arquivo HTML está correto
     });
 });

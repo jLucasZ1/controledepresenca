@@ -62,12 +62,12 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Botão para voltar à página anterior
     document.querySelector('.back-btn').addEventListener('click', function() {
-        window.location.href = 'pagina2.html';  // Verifique o nome do arquivo da página 2
+        window.location.href = 'chamada.html';  // Verifique o nome do arquivo da página 2
     });
 
     // Botão para finalizar e voltar à página 1
     document.querySelector('.confirm-btn').addEventListener('click', function() {
         localStorage.setItem('mensagemConclusao', 'Chamada concluída com sucesso!');
-        window.location.href = 'pagina1.html';  // Verifique o nome do arquivo da página 1
+        window.location.href = 'inicio.html';  // Verifique o nome do arquivo da página 1
     });
 });
