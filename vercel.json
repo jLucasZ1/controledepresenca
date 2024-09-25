@@ -1,0 +1,7 @@
+{
+  "routes": [
+    { "src": "/chamada", "dest": "/chamada.html" },
+    { "src": "/inicio", "dest": "/inicio.html" },
+    { "src": "/lista", "dest": "/lista.html" }
+  ]
+}
