@@ -68,6 +68,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Botão para finalizar e voltar à página 1
     document.querySelector('.confirm-btn').addEventListener('click', function() {
         localStorage.setItem('mensagemConclusao', 'Chamada concluída com sucesso!');
-        window.location.href = 'inicio.html';  // Verifique o nome do arquivo da página 1
+        window.location.href = 'index.html';  // Verifique o nome do arquivo da página 1
     });
 });
