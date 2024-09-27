@@ -1,0 +1,35 @@
+function doPost(e) {
+  var sheet = SpreadsheetApp.openById('1ZDtgIIbQBXcnBQQ0zyJ3xcBRgNrTjVLnCkGWfcN6EAk').getActiveSheet();
+  
+  try {
+    // Verificar se os dados foram realmente recebidos
+    if (!e.postData || !e.postData.contents) {
+      throw new Error("Dados de POST não recebidos.");
+    }
+    
+    // Tentar analisar os dados recebidos como JSON
+    var params = JSON.parse(e.postData.contents);
+    
+    // Verificar se os parâmetros necessários estão presentes
+    if (!params.nome || !params.sobrenome || !params.status || !params.data) {
+      throw new Error("Parâmetros incompletos: nome, sobrenome, status ou data ausentes.");
+    }
+    
+    // Inserir os dados na planilha
+    sheet.appendRow([params.nome, params.sobrenome, params.status, params.data]);
+    
+    // Retornar sucesso
+    return ContentService
+      .createTextOutput(JSON.stringify({ "status": "success" }))
+      .setMimeType(ContentService.MimeType.JSON);
+    
+  } catch (error) {
+    // Registrar erro para análise posterior
+    Logger.log("Erro ao processar a solicitação: " + error.message);
+    
+    // Retornar mensagem de erro
+    return ContentService
+      .createTextOutput(JSON.stringify({ "status": "error", "message": error.message }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
