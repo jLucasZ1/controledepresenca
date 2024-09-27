@@ -19,8 +19,10 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px; /* Aumentar largura da container */
     text-align: center;
+    max-height: 80vh; /* Limitar altura da caixa */
+    overflow-y: auto; /* Adicionar rolagem se o conteúdo exceder a altura */
 }
 
 .navigation {
@@ -51,18 +53,35 @@ header {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 5px;
+}
+
+.presence-btn {
+    background-color: #4CAF50; /* Verde para presenças */
+    color: white;
+}
+
+.absence-btn {
+    background-color: #F44336; /* Vermelho para faltas */
+    color: white;
 }
 
 .list {
     text-align: left;
+    max-height: 60vh; /* Limitar a altura da lista */
+    overflow-y: auto; /* Adicionar rolagem na lista se necessário */
+    padding-right: 10px; /* Para que o texto não fique muito perto da borda */
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 li {
     margin-bottom: 10px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,9 +98,11 @@ li {
 }
 
 .present {
-    background-color: green;
+    background-color: green; /* Verde para presença */
+    color: white;
 }
 
 .absent {
-    background-color: red;
+    background-color: red; /* Vermelho para falta */
+    color: white;
 }

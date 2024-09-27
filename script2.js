@@ -13,63 +13,67 @@ document.addEventListener('DOMContentLoaded', function () {
     let indiceAtual = 0;
 
     const participantes = [
-        { nome: "RAPHAEL", sobrenome: "CHAGAS TRINDADE" },
-        { nome: "LILIANE", sobrenome: "DOS SANTOS PAULA CAMARGO" },
-        { nome: "LETÍCIA", sobrenome: "LEAL COSTA" },
-        { nome: "ADRIAN", sobrenome: "ALMEIDA DA SILVA NASCIMENTO" },
-        { nome: "DEIVISON", sobrenome: "LUIZ GONÇALVES MARTINS" },
-        { nome: "MARIA EDUARDA", sobrenome: "SANTIAGO MORGADO" },
-        { nome: "ARTUR", sobrenome: "MILLER SANTOS" },
-        { nome: "GABRIELA", sobrenome: "LIMA CAETANO" },
-        { nome: "ANA LUISA", sobrenome: "SANTIAGO MORGADO" },
-        { nome: "ISABELA", sobrenome: "LIMA CAETANO" },
-        { nome: "HENRIQUE", sobrenome: "VEDIA OST" },
-        { nome: "MARIANA", sobrenome: "PRADO ROCHA DE ANDRADE" },
-        { nome: "MANUELA", sobrenome: "PRADO ROCHA DE ANDRADE" },
-        { nome: "WAGNER", sobrenome: "DA COSTA CAMARGO" },
-        { nome: "MANUELA", sobrenome: "MOREIRA NUNES SA" },
-        { nome: "ESTHER", sobrenome: "HORMUNDO DE OLIVEIRA" },
-        { nome: "BRUNA", sobrenome: "LUIZA E SOUZA" },
-        { nome: "MARIA EDUARDA", sobrenome: "EVANGELISTA SOARES" },
-        { nome: "GUSTAVO MIGUEL", sobrenome: "EVANGELISTA SOARES" },
-        { nome: "PEDRO", sobrenome: "PIMENTEL FERRAZ" },
-        { nome: "LETICIA", sobrenome: "MORAES TAVARES" },
-        { nome: "ALANA", sobrenome: "FERNANDES MILLER" },
-        { nome: "ERIC", sobrenome: "HERMAN OST" },
-        { nome: "JOÃO MURILO", sobrenome: "DE CARVALHO MACIEL" },
-        { nome: "MELISSA", sobrenome: "VEDIA OST" },
-        { nome: "LUCCAS", sobrenome: "TRINDADE DIAS" },
+        { nome: "RAPHAEL", sobrenome: "TRINDADE" },
+        { nome: "LILIANE", sobrenome: "CAMARGO" },
+        { nome: "LETÍCIA", sobrenome: "COSTA" },
+        { nome: "ADRIAN", sobrenome: "NASCIMENTO" },
+        { nome: "DEIVISON", sobrenome: "MARTINS" },
+        { nome: "MARIA EDUARDA", sobrenome: "MORGADO" },
+        { nome: "ARTUR", sobrenome: "SANTOS" },
+        { nome: "GABRIELA", sobrenome: "CAETANO" },
+        { nome: "ANA LUISA", sobrenome: "MORGADO" },
+        { nome: "ISABELA", sobrenome: "CAETANO" },
+        { nome: "HENRIQUE", sobrenome: "OST" },
+        { nome: "MARIANA", sobrenome: "ANDRADE" },
+        { nome: "MANUELA", sobrenome: "ANDRADE" },
+        { nome: "WAGNER", sobrenome: "CAMARGO" },
+        { nome: "MANUELA", sobrenome: "MOREIRA" },
+        { nome: "ESTHER", sobrenome: "OLIVEIRA" },
+        { nome: "BRUNA", sobrenome: "SOUZA" },
+        { nome: "MARIA EDUARDA", sobrenome: "SOARES" },
+        { nome: "GUSTAVO MIGUEL", sobrenome: "SOARES" },
+        { nome: "PEDRO", sobrenome: "FERRAZ" },
+        { nome: "LETICIA", sobrenome: "TAVARES" },
+        { nome: "ALANA", sobrenome: "MILLER" },
+        { nome: "ERIC", sobrenome: "OST" },
+        { nome: "JOÃO MURILO", sobrenome: "MACIEL" },
+        { nome: "MELISSA", sobrenome: "OST" },
+        { nome: "LUCCAS", sobrenome: "DIAS" },
         { nome: "INGRID GABRIELLY", sobrenome: "SILVA" },
-        { nome: "ENZO", sobrenome: "HORMUNDO GOES" },
-        { nome: "RICKSON", sobrenome: "PASTOR DOS SANTOS" },
-        { nome: "ISABELLY", sobrenome: "VIDAL DATRINO" },
-        { nome: "PETER GABRIEL", sobrenome: "AMARAL MACEDO" },
-        { nome: "LUÍSA", sobrenome: "CARVALHO DE SOUZA" },
-        { nome: "SOPHIA", sobrenome: "RODRIGUES DA SILVA" },
-        { nome: "DANIEL", sobrenome: "HONORIO MENDONÇA" },
-        { nome: "LUIZ HENRIQUE", sobrenome: "CUSTODIO CAVALHEIRO" },
-        { nome: "DARLAN", sobrenome: "LOPES LUIZ" },
-        { nome: "ISAAC", sobrenome: "ALMEIDA SALDANHA" },
-        { nome: "CLARA", sobrenome: "DINIZ SILVA" },
-        { nome: "DAVI", sobrenome: "BOTELHO GOMES" },
-        { nome: "JAIR RODRIGO", sobrenome: "ANDRADE GUIMARAES COSTA" },
-        { nome: "RAFAEL", sobrenome: "MOREIRA BOTELHO" },
-        { nome: "MIGUEL LUIS", sobrenome: "DA FONSECA" },
-        { nome: "MARIA LUISA", sobrenome: "AUGUSTO DINIZ" },
-        { nome: "REBECA", sobrenome: "VIDAL DE JESUS" },
-        { nome: "MIGUEL ÂNGELO", sobrenome: "VIDAL DE JESUS" },
-        { nome: "LARA VITORIA", sobrenome: "CARLOS NASCIMENTO" },
-        { nome: "LAIS GABRIELY", sobrenome: "CARLOS NASCIMENTO" },
-        { nome: "SAMUEL", sobrenome: "VAZ NEMY" },
-        { nome: "JOÃO PEDRO", sobrenome: "BERNARDO LUIZ" },
-        { nome: "ESTHER", sobrenome: "CECIM ALVES" },
-        { nome: "FILIPE", sobrenome: "GOMES MOREIRA" },
-        { nome: "MARIA EDUARDA", sobrenome: "CAMPOS OLIVEIRA GUIMARÃES" },
-        { nome: "GABRIEL", sobrenome: "GOMES DA SILVA LIMA" },
-        { nome: "DAVI", sobrenome: "DE PAULA VILLARINHO" },
-        { nome: "ANTHONY", sobrenome: "DOMINGOS REIS" },
-        { nome: "JOÃO LUCAS", sobrenome: "MARTINS ESPERANÇA" }
+        { nome: "ENZO", sobrenome: "GOES" },
+        { nome: "RICKSON", sobrenome: "SANTOS" },
+        { nome: "ISABELLY", sobrenome: "DATRINO" },
+        { nome: "PETER GABRIEL", sobrenome: "MACEDO" },
+        { nome: "LUÍSA", sobrenome: "SOUZA" },
+        { nome: "SOPHIA", sobrenome: "SILVA" },
+        { nome: "DANIEL", sobrenome: "MENDONÇA" },
+        { nome: "LUIZ HENRIQUE", sobrenome: "CAVALHEIRO" },
+        { nome: "DARLAN", sobrenome: "LUIZ" },
+        { nome: "ISAAC", sobrenome: "SALDANHA" },
+        { nome: "CLARA", sobrenome: "SILVA" },
+        { nome: "DAVI", sobrenome: "GOMES" },
+        { nome: "JAIR RODRIGO", sobrenome: "COSTA" },
+        { nome: "RAFAEL", sobrenome: "BOTELHO" },
+        { nome: "MIGUEL LUIS", sobrenome: "FONSECA" },
+        { nome: "MARIA LUISA", sobrenome: "DINIZ" },
+        { nome: "REBECA", sobrenome: "JESUS" },
+        { nome: "MIGUEL ÂNGELO", sobrenome: "JESUS" },
+        { nome: "LARA VITORIA", sobrenome: "NASCIMENTO" },
+        { nome: "LAIS GABRIELY", sobrenome: "NASCIMENTO" },
+        { nome: "SAMUEL", sobrenome: "NEMY" },
+        { nome: "JOÃO PEDRO", sobrenome: "LUIZ" },
+        { nome: "ESTHER", sobrenome: "ALVES" },
+        { nome: "FILIPE", sobrenome: "MOREIRA" },
+        { nome: "MARIA EDUARDA", sobrenome: "GUIMARÃES" },
+        { nome: "GABRIEL", sobrenome: "LIMA" },
+        { nome: "DAVI", sobrenome: "VILLARINHO" },
+        { nome: "ANTHONY", sobrenome: " REIS" },
+        { nome: "JOÃO LUCAS", sobrenome: " ESPERANÇA" }
+        // Adicione mais participantes aqui...
     ];
+
+    // Limpar dados de chamadas anteriores
+    localStorage.removeItem('chamada');
 
     function mostrarParticipante(indice) {
         if (indice < 0 || indice >= participantes.length) return;
@@ -110,19 +114,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function registrarPresencaOuFalta(nome, sobrenome, status) {
         const data = elements.dataSelecionada.textContent;
-        const url = 'https://script.google.com/macros/s/AKfycby-GYlR--X-eMDT9OVkIyrp2m0um_eee2OO5dScIYW4L7PtwfzAxmrubFpuPr8FqotiyQ/exec';
-        
-        fetch(url, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nome, sobrenome, status, data })
-        })
-        .then(response => {
-            console.log("Requisição enviada com sucesso");
-            proximoParticipante();
-        })
-        .catch(error => console.error("Erro ao enviar dados:", error));
+
+        // Armazena localmente as presenças e faltas
+        let chamada = JSON.parse(localStorage.getItem('chamada')) || [];
+        chamada.push({ nome, sobrenome, status, data });
+        localStorage.setItem('chamada', JSON.stringify(chamada));
+
+        // Se for presença, envia para o Google Sheets
+        if (status === 'Presença') {
+            const url = 'https://script.google.com/macros/s/AKfycbxhAzdYW-RQ6FlQwjO12xdRjf4h6igSsBlfkLLUIwbskElRqRRwDFQaMCcPlM5PUBesNg/exec';  // Substitua pela URL do Google Apps Script
+            
+            // Formatar os dados para envio
+            const dadosEnvio = {
+                nome: nome,
+                sobrenome: sobrenome,
+                data: data,
+                status: status
+            };
+
+            fetch(url, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dadosEnvio)
+            })
+            .then(response => {
+                console.log("Presença enviada com sucesso");
+            })
+            .catch(error => console.error("Erro ao enviar dados:", error));
+        }
+
+        proximoParticipante();
     }
 
     function proximoParticipante() {
