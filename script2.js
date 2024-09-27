@@ -13,62 +13,52 @@ document.addEventListener('DOMContentLoaded', function () {
     let indiceAtual = 0;
 
     const participantes = [
-        { nome: "RAPHAEL", sobrenome: "TRINDADE" },
-        { nome: "LILIANE", sobrenome: "CAMARGO" },
-        { nome: "LETÍCIA", sobrenome: "COSTA" },
-        { nome: "ADRIAN", sobrenome: "NASCIMENTO" },
-        { nome: "DEIVISON", sobrenome: "MARTINS" },
-        { nome: "MARIA EDUARDA", sobrenome: "MORGADO" },
-        { nome: "ARTUR", sobrenome: "SANTOS" },
-        { nome: "GABRIELA", sobrenome: "CAETANO" },
-        { nome: "ANA LUISA", sobrenome: "MORGADO" },
-        { nome: "ISABELA", sobrenome: "CAETANO" },
-        { nome: "HENRIQUE", sobrenome: "OST" },
-        { nome: "MARIANA", sobrenome: "ANDRADE" },
-        { nome: "MANUELA", sobrenome: "ANDRADE" },
-        { nome: "WAGNER", sobrenome: "CAMARGO" },
-        { nome: "MANUELA", sobrenome: "MOREIRA" },
-        { nome: "ESTHER", sobrenome: "OLIVEIRA" },
-        { nome: "BRUNA", sobrenome: "SOUZA" },
-        { nome: "MARIA EDUARDA", sobrenome: "SOARES" },
-        { nome: "GUSTAVO MIGUEL", sobrenome: "SOARES" },
-        { nome: "PEDRO", sobrenome: "FERRAZ" },
-        { nome: "LETICIA", sobrenome: "TAVARES" },
-        { nome: "ALANA", sobrenome: "MILLER" },
-        { nome: "ERIC", sobrenome: "OST" },
-        { nome: "JOÃO MURILO", sobrenome: "MACIEL" },
-        { nome: "MELISSA", sobrenome: "OST" },
-        { nome: "LUCCAS", sobrenome: "DIAS" },
-        { nome: "INGRID GABRIELLY", sobrenome: "SILVA" },
-        { nome: "ENZO", sobrenome: "GOES" },
-        { nome: "RICKSON", sobrenome: "SANTOS" },
-        { nome: "ISABELLY", sobrenome: "DATRINO" },
-        { nome: "PETER GABRIEL", sobrenome: "MACEDO" },
-        { nome: "LUÍSA", sobrenome: "SOUZA" },
-        { nome: "SOPHIA", sobrenome: "SILVA" },
-        { nome: "DANIEL", sobrenome: "MENDONÇA" },
-        { nome: "LUIZ HENRIQUE", sobrenome: "CAVALHEIRO" },
-        { nome: "DARLAN", sobrenome: "LUIZ" },
-        { nome: "ISAAC", sobrenome: "SALDANHA" },
-        { nome: "CLARA", sobrenome: "SILVA" },
-        { nome: "DAVI", sobrenome: "GOMES" },
-        { nome: "JAIR RODRIGO", sobrenome: "COSTA" },
-        { nome: "RAFAEL", sobrenome: "BOTELHO" },
-        { nome: "MIGUEL LUIS", sobrenome: "FONSECA" },
-        { nome: "MARIA LUISA", sobrenome: "DINIZ" },
-        { nome: "REBECA", sobrenome: "JESUS" },
-        { nome: "MIGUEL ÂNGELO", sobrenome: "JESUS" },
-        { nome: "LARA VITORIA", sobrenome: "NASCIMENTO" },
-        { nome: "LAIS GABRIELY", sobrenome: "NASCIMENTO" },
-        { nome: "SAMUEL", sobrenome: "NEMY" },
-        { nome: "JOÃO PEDRO", sobrenome: "LUIZ" },
-        { nome: "ESTHER", sobrenome: "ALVES" },
-        { nome: "FILIPE", sobrenome: "MOREIRA" },
-        { nome: "MARIA EDUARDA", sobrenome: "GUIMARÃES" },
-        { nome: "GABRIEL", sobrenome: "LIMA" },
-        { nome: "DAVI", sobrenome: "VILLARINHO" },
-        { nome: "ANTHONY", sobrenome: " REIS" },
-        { nome: "JOÃO LUCAS", sobrenome: " ESPERANÇA" }
+        { nome: "RAPHAEL TRINDADE", unidade: "Diretoria" },
+        { nome: "LILIANE CAMARGO", unidade: "Diretoria" },
+        { nome: "LETÍCIA LEAL", unidade: "Diretoria" },
+        { nome: "DEIVISON MARTINS", unidade: "Diretoria" },
+        { nome: "MARIA EDUARDA MORGADO", unidade: "Diretoria" },
+        { nome: "ARTUR MILLER", unidade: "Diretoria" },
+        { nome: "GABRIELA CAETANO", unidade: "Metsa" },
+        { nome: "ANA LUISA MORGADO", unidade: "Diretoria" },
+        { nome: "ISABELA CAETANO", unidade: "Diretoria" },
+        { nome: "HENRIQUE OST", unidade: "Diretoria" },
+        { nome: "MARIANA ANDRADE", unidade: "Virta" },
+        { nome: "MANUELA ANDRADE", unidade: "Diretoria" },
+        { nome: "MANUELA SÁ", unidade: "Metsa" },
+        { nome: "ESTHER HORMUNDO", unidade: "Linna" },
+        { nome: "BRUNA SOUZA", unidade: "Linna" },
+        { nome: "PEDRO FERRAZ", unidade: "Soturi" },
+        { nome: "LETICIA TAVARES", unidade: "Diretoria" },
+        { nome: "ALANA MILLER", unidade: "Diretoria" },
+        { nome: "JOÃO MURILO MACIEL", unidade: "Soturi" },
+        { nome: "MELISSA OST", unidade: "Virta" },
+        { nome: "LUCCAS DIAS", unidade: "Soturi" },
+        { nome: "INGRID GABRIELLY", unidade: "Metsa" },
+        { nome: "ENZO HORMUNDO", unidade: "Diretoria" },
+        { nome: "RICKSON SANTOS", unidade: "Vuori" },
+        { nome: "ISABELLY DATRINO", unidade: "Virta" },
+        { nome: "PETER GABRIEL MACEDO", unidade: "Vuori" },
+        { nome: "LUÍSA SOUZA", unidade: "Linna" },
+        { nome: "LUIZ HENRIQUE CAVALHEIRO", unidade: "Soturi" },
+        { nome: "ISAAC SALDANHA", unidade: "Vuori" },
+        { nome: "CLARA SILVA", unidade: "Metsa" },
+        { nome: "DAVI BOTELHO", unidade: "Vuori" },
+        { nome: "RAFAEL BOTELHO", unidade: "Vuori" },
+        { nome: "MIGUEL LUIS", unidade: "Soturi" },
+        { nome: "MARIA LUISA DINIZ", unidade: "Linna" },
+        { nome: "REBECA JESUS", unidade: "Virta" },
+        { nome: "MIGUEL ÂNGELO", unidade: "Vuori" },
+        { nome: "LARA VITORIA", unidade: "Virta" },
+        { nome: "LAIS GABRIELY", unidade: "Linna" },
+        { nome: "JOÃO PEDRO LUIZ", unidade: "Soturi" },
+        { nome: "ESTHER CECIM", unidade: "Metsa" },
+        { nome: "FILIPE MOREIRA", unidade: "Vuori" },
+        { nome: "MARIA EDUARDA GUIMARÃES", unidade: "Metsa" },
+        { nome: "GABRIEL GOMES", unidade: "Vuori" },
+        { nome: "DAVI VILLARINHO", unidade: "Soturi" },
+        { nome: "ANTHONY REIS", unidade: "Soturi" },
+        { nome: "JOÃO LUCAS ESPERANÇA", unidade: "Diretoria" }
         // Adicione mais participantes aqui...
     ];
 
@@ -79,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (indice < 0 || indice >= participantes.length) return;
         const participante = participantes[indice];
         document.querySelector('.nome').textContent = participante.nome;
-        document.querySelector('.sobrenome').textContent = participante.sobrenome;
+        document.querySelector(' unidade').textContent = participante.unidade;
     }
 
     elements.btnProximo.addEventListener('click', () => {
@@ -102,22 +92,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     elements.btnPresenca.addEventListener('click', () => {
         const nomeAtual = document.querySelector('.nome').textContent;
-        const sobrenomeAtual = document.querySelector('.sobrenome').textContent;
-        registrarPresencaOuFalta(nomeAtual, sobrenomeAtual, 'Presença');
+        const unidadeAtual = document.querySelector(' unidade').textContent;
+        registrarPresencaOuFalta(nomeAtual, unidadeAtual, 'Presença');
     });
 
     elements.btnFalta.addEventListener('click', () => {
         const nomeAtual = document.querySelector('.nome').textContent;
-        const sobrenomeAtual = document.querySelector('.sobrenome').textContent;
-        registrarPresencaOuFalta(nomeAtual, sobrenomeAtual, 'Falta');
+        const unidadeAtual = document.querySelector(' unidade').textContent;
+        registrarPresencaOuFalta(nomeAtual, unidadeAtual, 'Falta');
     });
 
-    function registrarPresencaOuFalta(nome, sobrenome, status) {
+    function registrarPresencaOuFalta(nome, unidade, status) {
         const data = elements.dataSelecionada.textContent;
 
         // Armazena localmente as presenças e faltas
         let chamada = JSON.parse(localStorage.getItem('chamada')) || [];
-        chamada.push({ nome, sobrenome, status, data });
+        chamada.push({ nome, unidade, status, data });
         localStorage.setItem('chamada', JSON.stringify(chamada));
 
         // Se for presença, envia para o Google Sheets
@@ -127,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Formatar os dados para envio
             const dadosEnvio = {
                 nome: nome,
-                sobrenome: sobrenome,
+             unidade: unidade,
                 data: data,
                 status: status
             };
