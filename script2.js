@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (indice < 0 || indice >= participantes.length) return;
         const participante = participantes[indice];
         document.querySelector('.nome').textContent = participante.nome;
-        document.querySelector(' unidade').textContent = participante.unidade;
+        document.querySelector('.unidade').textContent = participante.unidade;
     }
 
     elements.btnProximo.addEventListener('click', () => {
